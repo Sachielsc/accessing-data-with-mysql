@@ -7,6 +7,9 @@
 :source-highlighter: prettify
 :project_id: gs-accessing-data-mysql
 
+== Tutorial site
+include::https://spring.io/guides/gs/accessing-data-mysql/[]
+
 This guide walks you through the process of creating a Spring application connected to a
 MySQL Database (as opposed to an in-memory, embedded database, which most of the other
 guides and many sample applications use). It uses Spring Data JPA to access the database,
