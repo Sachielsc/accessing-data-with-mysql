@@ -7,7 +7,7 @@ public class Temp
     public void a()
     {
         t = "my";
-    k = 6;
+        k = 6;
     }
 
     public void b()

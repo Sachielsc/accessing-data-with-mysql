@@ -31,13 +31,13 @@ public class MainController {
   @GetMapping(path="/all")
   public @ResponseBody Iterable<User> getAllUsers() {
     // This returns a JSON or XML with the users
-    return userRepository.get(0);
+    // http://localhost:8080/demo/all
+    return userRepository.findAll();
   }
 
   @GetMapping(path="/returnString")
-  // http://localhost:8080/demo/returnString
+  // http://localhost:8080/demo/returnString?value=display this
   public @ResponseBody String returnString(@RequestParam String value) {
-    // This returns a JSON or XML with the users
     return value;
   }
 }
