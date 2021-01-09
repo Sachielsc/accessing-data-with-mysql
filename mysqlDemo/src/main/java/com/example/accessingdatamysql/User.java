@@ -4,8 +4,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 
 @Entity // This tells Hibernate to make a table out of this class
+@XmlRootElement(name = "user")
 public class User {
   @Id
   @GeneratedValue(strategy=GenerationType.AUTO)
@@ -19,6 +23,7 @@ public class User {
     return id;
   }
 
+  @XmlAttribute(name = "id")
   public void setId(Integer id) {
     this.id = id;
   }
@@ -27,6 +32,7 @@ public class User {
     return name;
   }
 
+  @XmlElement(name = "name")
   public void setName(String name) {
     this.name = name;
   }
