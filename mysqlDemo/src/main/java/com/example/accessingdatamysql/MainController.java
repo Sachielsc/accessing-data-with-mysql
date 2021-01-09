@@ -8,6 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.io.File;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Marshaller;
+
 @Controller // This means that this class is a Controller
 @RequestMapping(path="/demo") // This means URL's start with /demo (after Application path)
 public class MainController {
@@ -33,10 +39,31 @@ public class MainController {
   // curl localhost:8080/demo/addAndConvertXml -d name=ThirdPerson -d email=someemail@someemailprovider.com
   public @ResponseBody String addAndConvertXml (@RequestParam String name
           , @RequestParam String email) {
-    User n = new User();
-    n.setName(name);
-    n.setEmail(email);
-    userRepository.save(n);
+    User addUser = new User();
+    addUser.setName(name);
+    addUser.setEmail(email);
+    userRepository.save(addUser);
+
+    try {
+      // create an instance of `JAXBContext`
+      JAXBContext context = JAXBContext.newInstance(User.class);
+
+      // create an instance of `Marshaller`
+      Marshaller marshaller = context.createMarshaller();
+
+      // enable pretty-print XML output
+      marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+      // create XML file
+      File file = new File("book.xml");
+
+      // convert book object to XML file
+      marshaller.marshal(addUser, file);
+
+    } catch (JAXBException ex) {
+      ex.printStackTrace();
+    }
+
     return "Xml converted";
   }
 
