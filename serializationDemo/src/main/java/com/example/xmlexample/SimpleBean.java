@@ -1,10 +1,20 @@
-package com.example.accessingdatamysql;
+package com.example.xmlexample;
 
-public class SimpleBean1 {
+public class SimpleBean {
 
     String streetNumber;
     String streetName;
     String city;
+    int x;
+    int y;
+
+    public SimpleBean(){}  
+
+    public SimpleBean(String streetNumber, String streetName, String city){
+        this.streetNumber = streetNumber;
+        this.streetName = streetName;
+        this.city = city;
+    }
 
     public String getStreetNumber() {
         return streetNumber;
@@ -30,4 +40,19 @@ public class SimpleBean1 {
         this.city = city;
     }
 
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
 }
