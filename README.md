@@ -41,3 +41,4 @@ java -jar target/gs-accessing-data-jpa-0.1.0.jar
 - [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
 - [Accessing data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
 - [Jackson-conversions tutorial source code](https://github.com/eugenp/tutorials/tree/master/jackson-modules/jackson-conversions)
+- [spring-data-jpa Example projects](https://spring.io/projects/spring-data-jpa#samples)
