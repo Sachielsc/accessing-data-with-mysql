@@ -30,6 +30,13 @@ java -jar target/gs-accessing-data-jpa-0.1.0.jar
 
 # My serialization demo
 
+# TODO list
+- gson
+- jackson fastxml
+- axiell
+- compare
+- recordset
+
 # Reference sites
 - [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
 - [Accessing data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
