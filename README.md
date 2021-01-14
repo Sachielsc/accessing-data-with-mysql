@@ -1,4 +1,4 @@
-# My Spring data Jpa demo
+# Access data via mysql
 
 ## CLI commands
 ### Log in to mysql
@@ -20,8 +20,17 @@ curl localhost:8080/demo/addAndConvertXml -d name=ThirdPerson2 -d email=someemai
 ### View all person objects
 - [Click here](http://localhost:8080/demo/all)
 
+# Access data via jpa
+## CLI commands
+### Run the app
+If you use Maven, you can run the application by using `./mvnw spring-boot:run`. Alternatively, you can build the JAR file with `./mvnw clean package` and then run the JAR file, as follows:
+```bash
+java -jar target/gs-accessing-data-jpa-0.1.0.jar
+```
+
 # My serialization demo
 
 # Reference sites
 - [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
+- [Accessing data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
 - [Jackson-conversions tutorial source code](https://github.com/eugenp/tutorials/tree/master/jackson-modules/jackson-conversions)
